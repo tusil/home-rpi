@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stock_units",
+  "info": {
+    "name": "Stock unit",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "expires_at": {
+      "type": "date"
+    },
+    "product": {
+      "model": "product"
+    },
+    "ingredient": {
+      "via": "stock_units",
+      "model": "ingredient"
+    }
+  }
+}
